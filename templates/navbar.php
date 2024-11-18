@@ -1,4 +1,4 @@
-<?php
+<h6?php
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
@@ -6,11 +6,12 @@ if (session_status() == PHP_SESSION_NONE) {
 $cartCount = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
 $isLoggedIn = isset($_SESSION['customer_id']);
 ?>
-
-<nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: rgba(255, 255, 255, 0.95);">
+<body>
+<section class="header">
+<nav class="navbar navbar-expand-lg bg-body-tertiary" >
   <div class="container-fluid px-3">
     <a class="navbar-brand h1" href="./homepage.php">
-      <img src="assets/img/deltech2.png" alt="<?php echo $lang['Deltech']; ?>" style="height: 40px;">
+      <img src="assets/img/deltech2.png" alt="<?php echo $lang['Deltech']; ?>" style="height: 75px;">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#MyNavbar" aria-controls="MyNavbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -43,33 +44,50 @@ $isLoggedIn = isset($_SESSION['customer_id']);
         <li class="nav-item">
           <a class="nav-link nav-hover" href="./about.php">About Us</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link nav-hover" href="./login.php">Log In</a>
+        </li>
       </ul>
 
      
         </div>
       
     </div>
+    </nav></section>
 </nav>
+</body>
 
 
 <style>
 /* Navbar Styles */
+.body{
+  background-color: white;
+}
+.header {
+  background-color: white;
+}
+.nav item a {
+  font-size: 100px;
+}
+
 .navbar {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: white;
+    background-color: white;
 }
 
 .navbar .nav-link {
-    color: #333;
-    font-weight: 500;
+    margin-right: 120%;
+    color: black;
+    font-weight: 650;
     padding: 0.5rem 1rem;
-    margin: 0 0.2rem;
-    border-radius: 4px;
+    margin: 10 0.5rem;
+    border-radius: 10px;
     transition: all 0.3s ease;
 }
 
 /* Profile Icon Styles */
 .profile-icon, .menu-icon {
-    padding: 0.5rem !important;
+    padding: 0.9rem !important;
 }
 
 .profile-icon::after, .menu-icon::after {
@@ -77,14 +95,14 @@ $isLoggedIn = isset($_SESSION['customer_id']);
 }
 .search-bar .input-group {
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   border-radius: 30px;
   overflow: hidden;
-  background-color: #1c0038;
+  background-color: #280068;
   display: flex;
   align-items: center;
-  height: 25px; /* Set the desired height here */
-  margin-left: 250px;
+  height: 40px; /* Set the desired height here */
+  margin-left: 400px;
 }
 
 .search-bar .form-control {
@@ -92,17 +110,17 @@ $isLoggedIn = isset($_SESSION['customer_id']);
   border-radius: 0;
   box-shadow: none;
   padding: 0 20px;
-  background-color: #1c0038;
+  background-color: #280068;
   color: #ffffff;
   height: 100%; /* Ensure it fills the input-group height */
 }
 
 .search-bar .form-control::placeholder {
-  color: #ffffff;
+  color: #280068;
 }
 
 .search-bar .search-icon {
-  background-color: #1c0038;
+  background-color: #280068;
   border: none;
   color: #ffffff;
   padding: 0 15px;
