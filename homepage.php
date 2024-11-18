@@ -18,7 +18,7 @@ $latestProducts = $stmt->fetchAll();
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        
+
         /* General Styling */
         :root {
             --primary-color: #280068;
@@ -61,51 +61,66 @@ $latestProducts = $stmt->fetchAll();
 
 /* Slide Content */
 .hero-slider .slide-content {
+    height: 500px ;
+    width: 750px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  background-color: rgba(255, 255, 255, 0.75); /* Semi-transparent background */
   padding: 20px 40px;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .hero-slider .slide-content h1 {
-  font-size: 2.5rem;
+  font-size: 6.5rem;
   font-weight: bold;
-  color: #4A0D67;
-  margin: 0;
+  color: #280068 ;
+  margin-top: -10px;
+  margin-bottom: -10px;
 }
 
-.hero-slider .slide-content p {
-  font-size: 1rem;
-  color: #333;
+.hero-slider .slide-content h6{
+    margin-top:  100px;
+    font-size: 2rem;
+  font-weight: bold;
+  color: black ;
+  
+}
+
+.hero-slider .slide-content h5{
+    margin-top:  5px;
+    font-size: 2rem;
+  font-weight: bold;
+  color: black ;
+  
 }
 
 .hero-slider .slide-content .reserve-now-btn {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #4A0D67; /* Button background color */
+  background-color: #280068 ; /* Button background color */
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 30px;
+  width: 300px;
+  border-radius: 100px;
+  margin-top: 10%;
 }
 
 /* Navigation Buttons */
 .hero-slider .slider-nav-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  color: #fff;
-  font-size: 2rem;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
 }
 
         
@@ -178,15 +193,16 @@ $latestProducts = $stmt->fetchAll();
         .featured-products {
             padding: 4rem 2rem;
             text-align: center;
-            background-color: #f5f5f5;
+            background-color: white;
         }
 
         .section-title {
             color: #280068;
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 3rem;
             text-align: center;
             text-transform: uppercase;
+            font-weight: bold;
         }
 
         .products-grid {
@@ -222,7 +238,18 @@ $latestProducts = $stmt->fetchAll();
             font-size: 1.2rem;
             text-transform: uppercase;
         }
-
+        .product-item .prev-btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #280068 ; /* Button background color */
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        width: 300px;
+        border-radius: 100px;
+        margin-top: 10%;
+        }
        /* Updated Partners Section */
      /* Partners Section */
 .partners {
@@ -232,16 +259,15 @@ $latestProducts = $stmt->fetchAll();
 }
 
 .partners h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 1.3em;
     color: white;
-    background-color: #1a0046;
-    height: 100px;
+    background-color: #280068;
+    height: 120px;
     margin-top: 10px;
-    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: bold;
 }
 
 .partners-grid {
@@ -285,7 +311,9 @@ $latestProducts = $stmt->fetchAll();
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .partners h2 {
-        font-size: 20px;
+        font-size: 5rem;     
+        font-weight: bold;
+
     }
 
     .partner-logo img {
@@ -315,7 +343,7 @@ $latestProducts = $stmt->fetchAll();
         }
 
         .see-more-btn:hover {
-            background-color: #1a0046;
+            background-color: #280068;
         }
 
         .partners::after {
@@ -504,38 +532,41 @@ $latestProducts = $stmt->fetchAll();
     </style>
 </head>
 <body>
-    <!-- Enhanced Hero Slider -->
-    <section class="hero-slider">
-        <button class="slider-nav-btn prev-btn">❮</button>
-        <button class="slider-nav-btn next-btn">❯</button>
-        
-        <div class="slider-container">
-            <div class="slide">
-                <img src="assets/img/p1.jpg" alt="Parking Facility">
-                <div class="slide-content">
-                    <h1>WELCOME TO DELTECH</h1>
-                    <p>PARKING SYSTEMS AND SOLUTIONS INC.</p>
-                    <a href="index.php" class="reserve-now-btn">RESERVE NOW</a>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="assets/img/p2.jpg" alt="Parking Solutions">
-                <div class="slide-content">
-                    <h1>WELCOME TO DELTECH</h1>
-                    <p>PARKING SYSTEMS AND SOLUTIONS INC.</p>
-                    <a href="index.php" class="reserve-now-btn">RESERVE NOW</a>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="assets/img/p3.jpg" alt="Parking Technology">
-                <div class="slide-content">
-                    <h1>WELCOME TO DELTECH</h1>
-                    <p>PARKING SYSTEMS AND SOLUTIONS INC.</p>
-                    <a href="index.php" class="reserve-now-btn">RESERVE NOW</a>
-                </div>
+    
+<section class="hero-slider">
+    <button class="slider-nav-btn prev-btn">❮</button>
+    <button class="slider-nav-btn next-btn">❯</button>
+    
+    <div class="slider-container">
+        <div class="slide">
+            <img src="assets/img/p12.webp" alt="Parking Facility">
+            <div class="slide-content">
+                <h6>WELCOME TO</h6>
+                <h1>DELTECH</h1>
+                <h5>PARKING SYSTEMS AND SOLUTIONS INC.</h5>
+                <a href="index.php" class="reserve-now-btn">RESERVE NOW!</a>
             </div>
         </div>
-    </section>
+        <div class="slide">
+            <img src="assets/img/p13.webp" alt="Parking Solutions">
+            <div class="slide-content">
+            <h6>WELCOME TO</h6>
+                <h1>DELTECH</h1>
+                <h5>PARKING SYSTEMS AND SOLUTIONS INC.</h5>
+                <a href="index.php" class="reserve-now-btn">RESERVE NOW!</a>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="assets/img/p3.jpg" alt="Parking Technology">
+            <div class="slide-content">
+                <h1>WELCOME TO DELTECH</h1>
+                <p>PARKING SYSTEMS AND SOLUTIONS INC.</p>
+                <a href="index.php" class="reserve-now-btn">RESERVE NOW</a>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <section class="info-sections">
     <div class="info-card what-we-do">
@@ -564,7 +595,7 @@ $latestProducts = $stmt->fetchAll();
 
   <!-- Featured Products -->
 <section class="featured-products">
-    <h2 class="section-title">OUR FEATURED PRODUCTS</h2>
+    <h1 class="section-title">OUR FEATURED PRODUCTS</h1>
     <div class="products-grid">
         <?php foreach ($latestProducts as $product): ?>
         <a href="product.php?id=<?php echo $product['id']; ?>" class="product-item">
@@ -682,35 +713,45 @@ $latestProducts = $stmt->fetchAll();
 
     <?php include $tpl . 'footer.php'; ?>
 
+
     <script>
-        // Enhanced slider functionality with horizontal sliding
-        const sliderContainer = document.querySelector('.slider-container');
-        const slides = document.querySelectorAll('.slide');
-        const prevBtn = document.querySelector('.prev-btn');
-        const nextBtn = document.querySelector('.next-btn');
-        let currentSlide = 0;
-        const totalSlides = slides.length;
+    // Enhanced slider functionality with toggling between two slides
+    const sliderContainer = document.querySelector('.slider-container');
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let currentSlide = 0;  // Track the current slide (either 0 or 1)
+    const totalSlides = slides.length;
 
-        function updateSlider() {
-            sliderContainer.style.transform = `translateX(-${currentSlide * (100 / totalSlides)}%)`;
-        }
+    // Function to update the slider position
+    function updateSlider() {
+        // Only show two slides, current and the one toggled to
+        const slideWidth = slides[0].offsetWidth; // Get the width of one slide
+        sliderContainer.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+    }
 
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateSlider();
-        }
+    // Go to the next slide (toggle between 0 and 1)
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % 2; // Toggle between 0 and 1
+        updateSlider();
+    }
 
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            updateSlider();
-        }
+    // Go to the previous slide (toggle between 0 and 1)
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + 2) % 2; // Toggle between 0 and 1
+        updateSlider();
+    }
 
-        // Event listeners for navigation buttons
-        nextBtn.addEventListener('click', nextSlide);
-        prevBtn.addEventListener('click', prevSlide);
+    // Event listeners for navigation buttons
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
 
-        // Auto-advance slides every 5 seconds
-        setInterval(nextSlide, 5000);
-    </script>
+    // Auto-advance slides every 5 seconds
+    setInterval(nextSlide, 5000);
+
+    // Adjust for responsive layouts
+    window.addEventListener('resize', updateSlider);  // Recalculate on resize
+</script>
+
 </body>
 </html>
