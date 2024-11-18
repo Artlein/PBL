@@ -1,12 +1,22 @@
+<body>
 <footer class="py-5 my-2 bg-body-tertiary text-center position-relative">
   <div class="container">
     <p>&copy; <?php echo date('Y') . ' - ' . $lang['Deltech Parking Systems and Solution, Inc.']; ?></p>
-  </div>
+  
+
 </footer>
-<script src="<?php echo $js ?>jquery-3.7.0.min.js"></script>
-<script src="<?php echo $js ?>bootstrap.bundle.min.js"></script>
-<script src="<?php echo $js ?>main.js"></script>
+</div>
 
 </body>
-
+<style>
+  .body{
+    background-color: white;
+  }
+  .container{
+    background-color: white;
+  }
+  .footer {
+    background-color: white;
+  }
+</style>
 </html>

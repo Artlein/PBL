@@ -153,14 +153,14 @@ $latestProducts = $stmt->fetchAll();
             display: flex;
             gap: 2rem;
             padding: 4rem 2rem;
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
         }
 
         .info-card {
             flex: 1;
-            padding: 2.5rem;
-            border-radius: 10px;
+            padding: 3.5rem;
+            border-radius: 60px;
             color: white;
             transition: transform 0.3s ease;
         }
@@ -177,16 +177,32 @@ $latestProducts = $stmt->fetchAll();
             background-color: var(--yellow-color);
             color: #333;
         }
-
-        .info-card h2 {
+        .info-card h1 {
             margin-top: 0;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white ;
+            margin-bottom: 1rem
+            margin
         }
+        .info-card .our-services h1 {
+            text-align: right;
+
+        }
+
 
         .info-card p {
             line-height: 1.6;
             margin: 0;
+            color: white ;
+
+        }
+        .info-card li{
+            color:#fff
+        }
+        .info-card a{
+            color: white;
+            font-weight: 400;
         }
 
         /* Featured Products Section */
@@ -254,8 +270,7 @@ $latestProducts = $stmt->fetchAll();
      /* Partners Section */
 .partners {
     text-align: center;
-    padding: 30px 0;erdc
-    background-color: #f8f8f8;
+    padding: 30px 0;
 }
 
 .partners h2 {
@@ -424,12 +439,13 @@ $latestProducts = $stmt->fetchAll();
         .connect-links h3 {
             color: #280068;
             margin-bottom: 2rem;
-            font-size: 1.2rem; 
+            font-size: 1.4rem; 
             left: -10px;
             top: -10px;
             background: white;
             margin: 0;
             z-index: 3; 
+            font-weight: 500;
         }
 
         .connect-links ul {
@@ -443,9 +459,11 @@ $latestProducts = $stmt->fetchAll();
         }
 
         .connect-links a {
-            color: #333;
+            color: black;
             text-decoration: none;
             transition: color 0.3s ease;
+            font-size: 20px;
+
         }
 
         .connect-links a:hover {
@@ -570,7 +588,7 @@ $latestProducts = $stmt->fetchAll();
 
     <section class="info-sections">
     <div class="info-card what-we-do">
-        <h2>WHAT WE DO</h2>
+        <h1>WHAT WE DO</h1>
         <ul>
             <li><a href="parking_system_automation.php">Parking System Automation</a></li>
             <li><a href="autopay_station.php">Autopay Station</a></li>
@@ -583,9 +601,9 @@ $latestProducts = $stmt->fetchAll();
         </ul>
     </div>
     <div class="info-card our-services">
-        <h2>OUR SERVICES</h2>
+        <h1>OUR SERVICES</h1>
         <ul>
-            <li><a href="parking_station_design.php">Review and recommend parking station designs</a></li>
+            <li><a href="parking_station_design.php">Review and Recommend Parking Station Designs</a></li>
             <li><a href="preventive_maintenance.php">Preventive Maintenance for Parking Equipment</a></li>
             <li><a href="equipment_integration.php">Integration of Parking Equipment</a></li>
         </ul>

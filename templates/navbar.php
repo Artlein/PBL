@@ -6,6 +6,7 @@ if (session_status() == PHP_SESSION_NONE) {
 $cartCount = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
 $isLoggedIn = isset($_SESSION['customer_id']);
 ?>
+<body>
 <section class="header">
 <nav class="navbar navbar-expand-lg bg-body-tertiary" >
   <div class="container-fluid px-3">
@@ -54,10 +55,14 @@ $isLoggedIn = isset($_SESSION['customer_id']);
     </div>
     </nav></section>
 </nav>
+</body>
 
 
 <style>
 /* Navbar Styles */
+.body{
+  background-color: white;
+}
 .header {
   background-color: white;
 }
