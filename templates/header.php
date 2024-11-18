@@ -1,4 +1,4 @@
-'1<?php
+<?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['language'])) {
   $selectedLanguage = $_POST['language'];
   $_SESSION['language'] = $selectedLanguage;

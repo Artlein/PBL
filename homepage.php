@@ -1,4 +1,3 @@
-ghfg
 <?php
 session_start();
 $pageTitle = 'Homepage';
